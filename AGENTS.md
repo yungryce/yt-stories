@@ -8,9 +8,9 @@ Converts raw research markdown into structured video scripts via OpenAI structur
 - Entry: `python main.py --topic-dir <dir> --input-file <md> --output-file <md> [--previous-act <md>]`.
 
 ## Commands
-- Act 1: `python main.py --topic-dir Stream_01/Your_Story --input-file research.md --output-file Act_01_Script.md`
-- Act 2: `python main.py --topic-dir Stream_01/Your_Story --input-file research.md --output-file Act_02_Script.md --previous-act Act_01_Script.md`
-- Act 3: `python main.py --topic-dir Stream_01/Your_Story --input-file research.md --output-file Act_03_Script.md --previous-act Act_02_Script.md`
+- Act 1: `python main.py --topic-dir Stream/Your_Story --input-file research.md --output-file Act_01_Script.md`
+- Act 2: `python main.py --topic-dir Stream/Your_Story --input-file research.md --output-file Act_02_Script.md --previous-act Act_01_Script.md`
+- Act 3: `python main.py --topic-dir Stream/Your_Story --input-file research.md --output-file Act_03_Script.md --previous-act Act_02_Script.md`
 - Lint: `python -m py_compile models.py config.py pipeline.py writer.py main.py`
 - Install deps: `pip install -r requirements.txt`
 
@@ -22,7 +22,7 @@ Converts raw research markdown into structured video scripts via OpenAI structur
 - `main.py` — CLI (argparse) + orchestration; wires `seed` from config into the API call
 - `pipeline_config.json` — model target, hyperparameters (seed)
 - `global_config/` — `System_Prompt.md` (editorial voice), `Language_Ban_List.md` (banned words), `Creative_Freedom_Override.md` (anti-conservatism directive)
-- `Stream_01/` — story directories; each contains `research.md` (input) and `Act_XX_Script.md` (generated output)
+- `Stream/` — story directories; each contains `research.md` (input) and `Act_XX_Script.md` (generated output)
 
 ## Conventions
 - Use `model_validate()` not `parse_obj()` (Pydantic v2)

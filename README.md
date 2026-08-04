@@ -24,20 +24,20 @@ Generate one act at a time. For Acts 2 and 3, pipe in the previous act to mainta
 ```bash
 # Act 1
 python main.py \
-  --topic-dir Stream_01/Your_Story \
+  --topic-dir Stream/Your_Story \
   --input-file research.md \
   --output-file Act_01_Script.md
 
 # Act 2 (carries forward Act 1 for continuity)
 python main.py \
-  --topic-dir Stream_01/Your_Story \
+  --topic-dir Stream/Your_Story \
   --input-file research.md \
   --output-file Act_02_Script.md \
   --previous-act Act_01_Script.md
 
 # Act 3
 python main.py \
-  --topic-dir Stream_01/Your_Story \
+  --topic-dir Stream/Your_Story \
   --input-file research.md \
   --output-file Act_03_Script.md \
   --previous-act Act_02_Script.md
