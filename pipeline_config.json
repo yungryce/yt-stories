@@ -1,0 +1,7 @@
+{
+  "pipeline_name": "The_Drama_Thriller_Story_Engine",
+  "model_target": "gpt-5.5",
+  "hyperparameters": {
+    "seed": 42
+  }
+}
